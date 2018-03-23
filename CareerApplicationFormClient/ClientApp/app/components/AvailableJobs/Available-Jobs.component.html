@@ -1,0 +1,16 @@
+﻿
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <label class="input-group-text" for="JobRoles">Select Job Role</label>
+    </div>
+    <select class="custom-select" id="JobRoles">
+        <option value="NaN">--</option>
+        <option *ngFor="let job of jobs" value={{job.JobID}}>
+            {{job.JobName}}
+        </option>
+    </select>
+
+</div>
+
+
+

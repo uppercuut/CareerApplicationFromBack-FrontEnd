@@ -1,0 +1,54 @@
+﻿
+
+<div class="Form-Container">
+    <form [formGroup]="CandidateForm" (ngSubmit)="submit($event,CandidateForm.value)">
+        <DDLJobs (change)="onSelect($event.target.value)"></DDLJobs>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <label for="Fname">First name:</label>
+                    <input type="text" class="form-control" id="Fname" formControlName="Fname" placeholder="First name" />
+                </div>
+                <div class="col">
+                    <label for="Lname">Last name:</label>
+                    <input type="text" formControlName="Lname" id="Lname" class="form-control" placeholder="Last name" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <label for="Email">Email:</label>
+                    <input type="text" class="form-control" id="Email" formControlName="Email" placeholder="Email">
+                </div>
+                <div class="col">
+                    <label for="PhoneNumber">Phone number:</label>
+                    <input type="text" class="form-control" id="PhoneNumber" formControlName="PhoneNumber" placeholder="Phone number">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <div class="custom-file">
+                        <input id="CV" type="file" class="custom-file-input">
+                        <label class="custom-file-label" for="CV">Upload Cv</label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="custom-file">
+                        <input id="image" type="file" class="custom-file-input">
+                        <label class="custom-file-label" for="image">Upload picture</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="submit" />
+    </form>
+</div>
